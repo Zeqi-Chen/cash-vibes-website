@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Vibes By Team 25</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    nav {
+      background-color: #2c3e50;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    nav .menu-icon {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav .menu-icon {
+        display: block;
+      }
+
+      nav .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #2c3e50;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      nav .nav-links.active {
+        display: flex;
+      }
+    }
+
+    .content {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .content h2 {
+      font-size: 24px;
+      margin-top: 30px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .quiz {
+      margin-top: 40px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .quiz h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .quiz button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #2c3e50;
+      color: white;
+    }
+
+    .quiz button:hover {
+      background-color: #34495e;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="homepage.html" class="logo">Cash Vibes</a>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-links">
+      <a href="#">Information</a>
+      <a href="#">One for One Help</a>
+      <a href="#">Loan Calculator</a>
+      <a href="#">Spending Tracker</a>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h1>Financial Information</h1>
+    <h2>RRSP (Registered Retirement Savings Plan)</h2>
+    <p>An RRSP is a savings plan that helps Canadians save for retirement. Contributions are tax-deductible, and investments grow tax-free until withdrawal. If you are a tax resident with active income and wish to save for the long term or enjoy tax benefits, you are likely to need it.</p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/rrsps-related-plans/registered-retirement-savings-plan-rrsp.html">View details</a>
+    <h2>TFSA (Tax-Free Savings Account)</h2>
+    <p>A TFSA allows Canadians to save and invest tax-free. Contributions are not tax-deductible, but withdrawals are tax-free. If you are over 18 years old and have the corresponding status, and wish to pursue tax benefits or make flexible or long-term investments, it may be of some help.</p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account.html">View details</a>
+    <h2>Financial Literacy</h2>
+    <ul>
+        <li>The capital market refers to the financial market for securities financing and borrowing of medium and long-term funds for more than one year of operation, while the money market refers to a financial market that operates short-term fund transfers within one year.</li><br>
+        <li>Stocks are share certificates issued by a limited liability company to investors when raising capital, representing the ownership of the company by its holders. It has non repayability, participation, profitability, liquidity, price volatility, and risk, and is usually a preferred investment target during periods of high inflation.</li><br>
+        <li>Bonds are debt instruments issued to investors by governments, financial institutions, industrial and commercial enterprises, and other institutions that directly borrow from society to raise funds, and promise to pay interest at a certain rate and repay principal according to agreed conditions. It has repayment, liquidity, safety, and profitability.</li><br>
+        <li>Fund refers to a collective securities investment method that shares benefits and risks, that is, by issuing fund units, concentrating investors' funds, entrusted by fund custodians, managed and utilized by fund managers, and engaging in financial instrument investments such as stocks and bonds. It is usually divided into open-end funds (the total amount of fund issuance is not fixed, and the total number of fund units can increase or decrease at any time) and closed-end funds (the total amount of issuance is determined in advance, and the total number of fund units remains unchanged during the closed-end period).</li><br>
+        <li>The primary market refers to the issuance market, where investors can subscribe to stocks and other securities issued by the company. The secondary market refers to the circulating market, which is a place for buying and selling securities such as issued stocks.</li><br>
+        <li>Financial management is learning to handle and use money reasonably, effectively arrange personal or family expenses, make correct financial investments while meeting the needs of normal life, purchase various financial products suitable for oneself, and maximize the preservation and appreciation of assets.</li><br>
+        <li>A budget is a calculation plan for a defined period. Preparing a budget allows companies, authorities, private entities or families to establish priorities and evaluate the achievement of their objectives. In the field of commerce, a budget is also a financial document or report that details the cost that a service will have if performed. A budget may express a surplus or a deficit.</li>
+    </ul>
+    <h2>Personal Finance Tips</h2>
+    <ul>
+      <li>Create a budget and stick to it.</li>
+      <li>Save at least 20% of your income.</li>
+      <li>Invest in low-cost index funds for long-term growth.</li>
+      <li>When choosing financial products, it is important to understand one's assets, goals, risk tolerance, as well as the volatility and risks of the products.</li>
+      <li>High returns mean high risks. Walk within your means and don't blindly invest in projects you don't understand.</li>
+      <li>The purpose of financial management is not to make money, but to preserve and increase the value of assets and manage risks.</li>
+    </ul>
+    <h2>Real-Life Examples</h2>
+    <p><b>Positive Case 1:</b> John is a middle-aged engineer with a stable and high annual salary. He realized that as he grew older, he needed to make long-term plans for his retirement life. So John started using RRSP for savings. He invests a portion of his income into RRSP every year to enjoy tax incentives. At the same time, he chose to invest the funds in RRSP in a diversified portfolio of stocks and bonds in order to achieve stable growth in returns. After years of accumulation, John's RRSP account has become quite substantial. He plans to gradually withdraw funds from his RRSP after retirement to supplement his pension. Due to his expectation that the tax rate after retirement will be lower than during the working stage, saving and withdrawing through RRSP can effectively reduce the overall tax burden.</p>
+    <p><b>Positive Case 2:</b> Sarah is a young freelancer with significant income fluctuations. She hopes to find an investment method that can enjoy tax benefits and flexible access. So she chose TFSA. Sarah deposits a portion of her income into TFSA every year and invests it in low-cost index funds. Due to the tax-free investment income in TFSA, she does not have to worry about the tax burden caused by capital appreciation. At the same time, the flexibility of TFSA also allows her to withdraw funds at any time to respond to emergencies or make other investments. After years of investment, Sarah's TFSA account has achieved considerable returns. She plans to continue using TFSA for long-term investments in the future to achieve asset preservation and appreciation.</p>
+    <p><b>Negative Case 1:</b> Vincent is an investor with limited knowledge of financial markets. He heard that a certain stock fund had performed well in the past few years, so he decided to invest all his savings into it. However, he did not fully understand the risk level and investment strategy of the fund, nor did he diversify his investment portfolio. Shortly thereafter, the investment strategy of the fund encountered market changes, resulting in a significant decline in returns. Vincent was forced to sell the fund due to the inability to bear huge losses, resulting in investment failure.</p>
+    <p><b>Negative Case 2:</b> Sophia is a young white-collar worker with stable income but lacks financial awareness. She often shops and spends without a plan, resulting in monthly expenses far exceeding her income. Although she has tried to set a budget, she always struggles to stick to it due to various reasons. As time passed, Sophia's debt gradually accumulated and she had to rely on credit card overdrafts and borrowing to sustain her livelihood. This not only puts enormous pressure on her financial situation, but also affects her credit record and future borrowing ability.</p>
+
+    <div class="quiz">
+        <h2>Financial Quiz</h2>
+        <p id="quiz-question"></p>
+        <div id="quiz-options"></div>
+        <p id="quiz-result"></p>
+        <button id="next-question" style="display: none;" onclick="nextQuestion()">Next Question</button>
+        <button id="reset-quiz" style="display: none;" onclick="resetQuiz()">Restart Quiz</button>
+      </div>
+    </div><br>
+
+  <script>
+    const quizData = [
+      {
+        question: "Question 1: Is an RRSP tax-deductible for contributions?",
+        options: ["Yes", "No"],
+        correctAnswer: 0,
+      },
+      {
+        question: "Question 2: Which account allows Canadians to save and invest tax-free, but contributions are not tax-deductible?",
+        options: ["RRSP", "TFSA"],
+        correctAnswer: 1,
+      },
+      {
+        question: "Question 3: The capital market deals with financing and borrowing of funds for:",
+        options: ["Less than one year", "More than one year"],
+        correctAnswer: 1,
+      },
+      {
+        question: "Question 4: Stocks represent the ownership of a company by its:",
+        options: ["Holders", "Creditors"],
+        correctAnswer: 0,
+      },
+      {
+        question: "Question 5: Bonds are debt instruments issued to investors by:",
+        options: ["Only governments", "Governments, financial institutions, and other borrowing entities"],
+        correctAnswer: 1,
+      },
+      {
+        question: "Question 6: Which type of fund has a fixed total amount of issuance and the number of fund units remains unchanged during the closed-end period?",
+        options: ["Open-end fund", "Closed-end fund"],
+        correctAnswer: 1,
+      },
+      {
+        question: "Question 7: The primary market is where investors can:",
+        options: ["Subscribe to newly issued securities like stocks", "Buy and sell already issued securities"],
+        correctAnswer: 0,
+      },
+      {
+        question: "Question 8: Financial management involves:",
+        options: ["Only saving money", "Reasonably handling and using money, arranging expenses, and making investments"],
+        correctAnswer: 1,
+      },
+      {
+        question: "Question 9: When choosing financial products, it is important to understand:",
+        options: ["Only the product's return rate", "One's assets, goals, risk tolerance, and product volatility"],
+        correctAnswer: 1,
+      },
+      {
+        question: "Question 10: The primary purpose of financial management is:",
+        options: ["To preserve and increase the value of assets and manage risks", "To make as much money as possible"],
+        correctAnswer: 0,
+      },
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    const quizQuestion = document.getElementById("quiz-question");
+    const quizOptions = document.getElementById("quiz-options");
+    const quizResult = document.getElementById("quiz-result");
+    const nextButton = document.getElementById("next-question");
+    const resetButton = document.getElementById("reset-quiz");
+
+    loadQuestion();
+
+    function loadQuestion() {
+      const currentQuestion = quizData[currentQuestionIndex];
+      quizQuestion.textContent = currentQuestion.question;
+      quizOptions.innerHTML = "";
+
+      currentQuestion.options.forEach((option, index) => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.onclick = () => checkAnswer(index);
+        quizOptions.appendChild(button);
+      });
+
+      quizResult.textContent = "";
+      nextButton.style.display = "none";
+    }
+
+    function checkAnswer(selectedIndex) {
+      const currentQuestion = quizData[currentQuestionIndex];
+      if (selectedIndex === currentQuestion.correctAnswer) {
+        quizResult.textContent = "Correct!";
+        score++;
+      } else {
+        quizResult.textContent = "Incorrect.";
+      }
+
+      nextButton.style.display = "block";
+    }
+
+    function nextQuestion() {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < quizData.length) {
+        loadQuestion();
+      } else {
+        showFinalScore();
+      }
+    }
+
+    function showFinalScore() {
+      quizQuestion.textContent = `Quiz Complete! You scored ${score} out of ${quizData.length}.`;
+      quizOptions.innerHTML = "";
+      quizResult.textContent = "";
+      nextButton.style.display = "none";
+      resetButton.style.display = "block";
+    }
+
+    function resetQuiz() {
+      currentQuestionIndex = 0;
+      score = 0;
+      loadQuestion();
+      resetButton.style.display = "none";
+    }
+
+    function toggleMenu(event) {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function (event) {
+      const navLinks = document.querySelector('.nav-links');
+      const menuIcon = document.querySelector('.menu-icon');
+      if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

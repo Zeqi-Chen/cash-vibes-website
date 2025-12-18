@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Vibes By Team 25</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    nav {
+      background-color: #2c3e50;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    nav .menu-icon {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav .menu-icon {
+        display: block;
+      }
+
+      nav .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #2c3e50;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      nav .nav-links.active {
+        display: flex;
+      }
+    }
+
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .feature {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 16px;
+    }
+
+    .feature a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .pictures{
+      display: flex;
+      justify-content: center;
+      gap: 7%;
+      padding: 0 3%;
+    }
+
+    .pictures img{
+      width: 40%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="homepage.html" class="logo">Cash Vibes</a>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-links">
+      <a href="information.html">Information</a>
+      <a href="#">One for One Help</a>
+      <a href="#">Loan Calculator</a>
+      <a href="#">Spending Tracker</a>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h1>Welcome to Cash Vibes</h1>
+    <p>A financial learning platform for young people, offering informational content and tools while monetizing via affiliate links. <br>Your one-stop destination for managing your finances, learning about personal finance, and planning for the future.</p>
+    <div class="features">
+      <div class="feature">
+        <a href="information.html">
+          <h2>Information</h2>
+          <p>Learn about useful financial knowledge.</p>
+        </a>
+      </div>
+      <div class="feature">
+        <a href="#">
+          <h2>One for One Help</h2>
+          <p>Get personalized financial advice.</p>
+        </a>
+      </div>
+      <div class="feature">
+        <a href="#">
+          <h2>Loan Calculator</h2>
+          <p>Calculate your loan payments easily.</p>
+        </a>
+      </div>
+      <div class="feature">
+        <a href="#">
+          <h2>Spending Tracker</h2>
+          <p>Track and manage your expenses.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pictures">
+    <img src="./assets/images/picture1.png" alt="picture">
+    <img src="./assets/images/picture2.png" alt="picture">
+  </div><br>
+  
+  <script>
+    function toggleMenu(event) {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function (event) {
+      const navLinks = document.querySelector('.nav-links');
+      const menuIcon = document.querySelector('.menu-icon');
+      if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
